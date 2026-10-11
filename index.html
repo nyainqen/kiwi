@@ -10,9 +10,25 @@
   body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; color: #2d3a2e; line-height: 1.7; background: #fafcf7; }
   img { max-width: 100%; display: block; }
   a { text-decoration: none; color: inherit; }
-  .navbar { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); box-shadow: 0 2px 12px rgba(0,0,0,0.06); display: flex; align-items: center; justify-content: space-between; padding: 12px 5%; }
-  .logo { font-size: 20px; font-weight: 700; color: #4a7c3f; }
-  .nav-links { display: flex; gap: 24px; font-size: 15px; }
+  .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 8%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+ .nav-links {
+  display: flex;
+  gap: 44px;
+  font-size: 15px;
+}
   .nav-links a:hover { color: #4a7c3f; }
   .nav-links a.active { color: #4a7c3f; font-weight: 700; }
   .nav-wechat { background: #4a7c3f; color: #fff; padding: 8px 18px; border-radius: 20px; font-size: 14px; font-weight: 600; }
