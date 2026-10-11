@@ -7,160 +7,54 @@
 <meta name="description" content="陕西周至翠香猕猴桃，秦岭北麓核心产区，树上八九分熟采摘，坏果包赔。扫码加微信，产地直供价。">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-    color: #2d3a2e;
-    line-height: 1.7;
-    background: #fafcf7;
-  }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; color: #2d3a2e; line-height: 1.7; background: #fafcf7; }
   img { max-width: 100%; display: block; }
   a { text-decoration: none; color: inherit; }
-
-  /* 导航栏 */
-  .navbar {
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 12px 5%;
-  }
+  .navbar { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); box-shadow: 0 2px 12px rgba(0,0,0,0.06); display: flex; align-items: center; justify-content: space-between; padding: 12px 5%; }
   .logo { font-size: 20px; font-weight: 700; color: #4a7c3f; }
   .nav-links { display: flex; gap: 24px; font-size: 15px; }
   .nav-links a:hover { color: #4a7c3f; }
-  .nav-wechat {
-    background: #4a7c3f; color: #fff;
-    padding: 8px 18px; border-radius: 20px;
-    font-size: 14px; font-weight: 600;
-  }
-
-  /* 通用区块 */
+  .nav-links a.active { color: #4a7c3f; font-weight: 700; }
+  .nav-wechat { background: #4a7c3f; color: #fff; padding: 8px 18px; border-radius: 20px; font-size: 14px; font-weight: 600; }
   section { padding: 60px 5%; }
-  .section-title {
-    text-align: center; font-size: 26px; font-weight: 700;
-    color: #3a5c32; margin-bottom: 12px;
-  }
-  .section-sub {
-    text-align: center; color: #7a8a76;
-    font-size: 15px; margin-bottom: 40px;
-  }
-
-  /* 首屏 Banner */
-  .hero {
-    position: relative; min-height: 520px;
-    display: flex; align-items: center; justify-content: center;
-    text-align: center; color: #fff;
-    background: linear-gradient(rgba(30,50,25,0.45), rgba(30,50,25,0.55)),
-                url('images/banner.jpg') center/cover no-repeat;
-    padding: 80px 5%;
-  }
+  .section-title { text-align: center; font-size: 26px; font-weight: 700; color: #3a5c32; margin-bottom: 12px; }
+  .section-sub { text-align: center; color: #7a8a76; font-size: 15px; margin-bottom: 40px; }
+  .hero { position: relative; min-height: 520px; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; background: linear-gradient(rgba(30,50,25,0.45), rgba(30,50,25,0.55)), url('images/banner.jpg') center/cover no-repeat; padding: 80px 5%; }
   .hero h1 { font-size: 38px; font-weight: 800; margin-bottom: 16px; letter-spacing: 1px; }
   .hero p { font-size: 18px; margin-bottom: 30px; opacity: 0.95; }
-  .btn-main {
-    display: inline-block; background: #f5a623; color: #fff;
-    padding: 14px 38px; border-radius: 30px;
-    font-size: 16px; font-weight: 700;
-    box-shadow: 0 6px 20px rgba(245,166,35,0.4);
-    transition: transform 0.2s;
-  }
+  .btn-main { display: inline-block; background: #f5a623; color: #fff; padding: 14px 38px; border-radius: 30px; font-size: 16px; font-weight: 700; box-shadow: 0 6px 20px rgba(245,166,35,0.4); transition: transform 0.2s; }
   .btn-main:hover { transform: translateY(-2px); }
-
-  /* 信任点 */
-  .trust-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 24px; max-width: 900px; margin: 0 auto;
-  }
-  .trust-item {
-    background: #fff; border-radius: 14px; padding: 28px 20px;
-    text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.05);
-  }
+  .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
+  .trust-item { background: #fff; border-radius: 14px; padding: 28px 20px; text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
   .trust-item .icon { font-size: 32px; margin-bottom: 10px; }
   .trust-item h3 { font-size: 17px; color: #3a5c32; margin-bottom: 6px; }
   .trust-item p { font-size: 14px; color: #7a8a76; }
-
-  /* 产品卡片 */
-  .product-grid {
-    display: grid; grid-template-columns: repeat(2, 1fr);
-    gap: 28px; max-width: 820px; margin: 0 auto;
-  }
-  .product-card {
-    background: #fff; border-radius: 16px; overflow: hidden;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.07);
-    transition: transform 0.25s;
-  }
+  .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 820px; margin: 0 auto; }
+  .product-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 24px rgba(0,0,0,0.07); transition: transform 0.25s; }
   .product-card:hover { transform: translateY(-4px); }
   .product-card img { height: 220px; object-fit: cover; width: 100%; }
   .product-info { padding: 20px; }
   .product-info h3 { font-size: 18px; color: #3a5c32; margin-bottom: 8px; }
   .product-info .desc { font-size: 14px; color: #6a7a66; margin-bottom: 14px; }
   .product-info .price { font-size: 16px; color: #e07b39; font-weight: 700; margin-bottom: 14px; }
-  .btn-outline {
-    display: inline-block; border: 2px solid #4a7c3f; color: #4a7c3f;
-    padding: 8px 22px; border-radius: 20px;
-    font-size: 14px; font-weight: 600;
-  }
+  .btn-outline { display: inline-block; border: 2px solid #4a7c3f; color: #4a7c3f; padding: 8px 22px; border-radius: 20px; font-size: 14px; font-weight: 600; }
   .btn-outline:hover { background: #4a7c3f; color: #fff; }
-
-  /* 产地故事 */
-  .story-wrap {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 40px; max-width: 1000px; margin: 0 auto; align-items: center;
-  }
-  .story-img { border-radius: 16px; overflow: hidden; box-shadow: 0 8px 28px rgba(0,0,0,0.1); }
-  .story-text h3 { font-size: 22px; color: #3a5c32; margin-bottom: 16px; }
-  .story-text p { font-size: 15px; color: #5a6a56; margin-bottom: 14px; }
-  .story-text .highlight { color: #4a7c3f; font-weight: 700; }
-
-  /* 用户评价 */
-  .review-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 20px; max-width: 1000px; margin: 0 auto;
-  }
-  .review-card {
-    background: #fff; border-radius: 14px; padding: 24px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
-    font-size: 14px; color: #5a6a56;
-  }
-  .review-card .name { margin-top: 12px; color: #4a7c3f; font-weight: 600; }
-
-  /* 微信引导区 */
-  .wechat-section {
-    background: linear-gradient(135deg, #4a7c3f, #6ba05a);
-    color: #fff; text-align: center; border-radius: 20px;
-    padding: 50px 5%; max-width: 1000px; margin: 0 auto;
-  }
+  .more-link { text-align: center; margin-top: 30px; }
+  .more-link a { color: #4a7c3f; font-weight: 600; font-size: 15px; }
+  .more-link a:hover { text-decoration: underline; }
+  .wechat-section { background: linear-gradient(135deg, #4a7c3f, #6ba05a); color: #fff; text-align: center; border-radius: 20px; padding: 50px 5%; max-width: 1000px; margin: 0 auto; }
   .wechat-section h2 { font-size: 26px; margin-bottom: 12px; }
   .wechat-section p { font-size: 16px; margin-bottom: 24px; opacity: 0.95; }
-  .wechat-qr {
-    width: 180px; height: 180px; margin: 0 auto 16px;
-    background: #fff; border-radius: 12px; padding: 8px;
-  }
+  .wechat-qr { width: 180px; height: 180px; margin: 0 auto 16px; background: #fff; border-radius: 12px; padding: 8px; }
   .wechat-id { font-size: 16px; font-weight: 600; letter-spacing: 1px; }
-
-  /* 页脚 */
-  footer {
-    background: #2d3a2e; color: #b8c4b4;
-    text-align: center; padding: 30px 5%; font-size: 13px;
-  }
-  footer a { color: #b8c4b4; }
+  footer { background: #2d3a2e; color: #b8c4b4; text-align: center; padding: 30px 5%; font-size: 13px; }
   footer .qr-small { width: 100px; margin: 0 auto 12px; border-radius: 8px; }
-
-  /* 手机端悬浮微信按钮 */
-  .float-wechat {
-    display: none; position: fixed; bottom: 20px; right: 20px; z-index: 200;
-    background: #4a7c3f; color: #fff;
-    padding: 14px 22px; border-radius: 30px;
-    font-size: 15px; font-weight: 700;
-    box-shadow: 0 6px 20px rgba(74,124,63,0.5);
-  }
-
-  /* 响应式 */
+  .float-wechat { display: none; position: fixed; bottom: 20px; right: 20px; z-index: 200; background: #4a7c3f; color: #fff; padding: 14px 22px; border-radius: 30px; font-size: 15px; font-weight: 700; box-shadow: 0 6px 20px rgba(74,124,63,0.5); }
   @media (max-width: 768px) {
     .nav-links { display: none; }
     .hero h1 { font-size: 26px; }
     .hero p { font-size: 15px; }
-    .trust-grid, .product-grid, .review-grid { grid-template-columns: 1fr; }
-    .story-wrap { grid-template-columns: 1fr; }
+    .trust-grid, .product-grid { grid-template-columns: 1fr; }
     .section-title { font-size: 22px; }
     section { padding: 40px 5%; }
     .float-wechat { display: block; }
@@ -169,29 +63,26 @@
 </head>
 <body>
 
-<!-- 导航栏 -->
 <nav class="navbar">
   <div class="logo">周至翠香猕猴桃</div>
   <div class="nav-links">
-    <a href="#home">首页</a>
-    <a href="#products">产品中心</a>
-    <a href="#story">产地故事</a>
-    <a href="#reviews">用户评价</a>
-    <a href="#contact">联系购买</a>
+    <a href="index.html" class="active">首页</a>
+    <a href="products.html">产品中心</a>
+    <a href="story.html">产地故事</a>
+    <a href="about.html">关于我们</a>
+    <a href="contact.html">联系购买</a>
   </div>
-  <a href="#contact" class="nav-wechat">加微信</a>
+  <a href="contact.html" class="nav-wechat">加微信</a>
 </nav>
 
-<!-- 首屏 Banner -->
-<header class="hero" id="home">
+<header class="hero">
   <div>
     <h1>陕西周至 · 翠香猕猴桃</h1>
     <p>终南山下，道地好果。树上八九分熟采摘，到手即食。</p>
-    <a href="#contact" class="btn-main">扫码加微信 · 领尝鲜价</a>
+    <a href="products.html" class="btn-main">查看当季鲜果</a>
   </div>
 </header>
 
-<!-- 三大信任点 -->
 <section>
   <div class="trust-grid">
     <div class="trust-item">
@@ -212,9 +103,8 @@
   </div>
 </section>
 
-<!-- 产品中心 -->
-<section id="products" style="background:#f2f7ee;">
-  <h2 class="section-title">当季鲜果</h2>
+<section style="background:#f2f7ee;">
+  <h2 class="section-title">当季主打</h2>
   <p class="section-sub">周至翠香，产地直供</p>
   <div class="product-grid">
     <div class="product-card">
@@ -223,7 +113,7 @@
         <h3>翠香猕猴桃 · 5斤装</h3>
         <p class="desc">70-90g/枚，果肉翠绿，细嫩多汁</p>
         <p class="price">微信咨询价</p>
-        <a href="#contact" class="btn-outline">扫码咨询</a>
+        <a href="products.html" class="btn-outline">查看详情</a>
       </div>
     </div>
     <div class="product-card">
@@ -232,51 +122,16 @@
         <h3>翠香猕猴桃 · 礼盒装</h3>
         <p class="desc">110g+/枚，12枚精装，送礼佳选</p>
         <p class="price">微信咨询价</p>
-        <a href="#contact" class="btn-outline">扫码咨询</a>
+        <a href="products.html" class="btn-outline">查看详情</a>
       </div>
     </div>
   </div>
-</section>
-
-<!-- 产地故事 -->
-<section id="story">
-  <h2 class="section-title">终南山下，道地好果</h2>
-  <p class="section-sub">来自秦岭北麓的翠绿心意</p>
-  <div class="story-wrap">
-    <div class="story-img">
-      <img src="images/orchard.jpg" alt="周至猕猴桃果园">
-    </div>
-    <div class="story-text">
-      <h3>我们的果园</h3>
-      <p>周至，南依秦岭，北濒渭水，是世界猕猴桃原生地之一。这里年均日照充足，昼夜温差大，土壤富含有机质，为翠香提供了理想的生长环境。</p>
-      <p>翠香由秦岭野生猕猴桃培育而来，是周至自主选育的明星品种。我们坚持<span class="highlight">树上八九分熟采摘</span>，不催熟、不早采，让每一颗果子在藤上自然积累风味。</p>
-      <p>从果园到消费者，<span class="highlight">产地直发</span>，省去中间环节，保证新鲜度和性价比。</p>
-    </div>
+  <div class="more-link">
+    <a href="products.html">查看全部产品 →</a>
   </div>
 </section>
 
-<!-- 用户评价 -->
-<section id="reviews" style="background:#f2f7ee;">
-  <h2 class="section-title">用户评价</h2>
-  <p class="section-sub">吃过的人怎么说</p>
-  <div class="review-grid">
-    <div class="review-card">
-      “果子很大，切开汁水直流，甜度刚好，孩子特别爱吃。”
-      <div class="name">—— 王女士 · 西安</div>
-    </div>
-    <div class="review-card">
-      “第二次买了，比超市的新鲜太多，果肉翠绿翠绿的。”
-      <div class="name">—— 李先生 · 北京</div>
-    </div>
-    <div class="review-card">
-      “包装很用心，没有一个坏果，翠香确实比徐香好吃。”
-      <div class="name">—— 张女士 · 上海</div>
-    </div>
-  </div>
-</section>
-
-<!-- 微信引导区 -->
-<section id="contact">
+<section>
   <div class="wechat-section">
     <h2>扫码加微信，直接产地价</h2>
     <p>领尝鲜装 · 咨询当季鲜果 · 坏果包赔</p>
@@ -287,7 +142,6 @@
   </div>
 </section>
 
-<!-- 页脚 -->
 <footer>
   <img src="images/wechat-qr.png" alt="微信二维码" class="qr-small">
   <p>陕西周至翠香猕猴桃 · 产地直供</p>
@@ -295,8 +149,7 @@
   <p style="margin-top:10px; opacity:0.6;">© 2026 周至翠香猕猴桃</p>
 </footer>
 
-<!-- 手机端悬浮微信按钮 -->
-<a href="#contact" class="float-wechat">微信咨询</a>
+<a href="contact.html" class="float-wechat">微信咨询</a>
 
 </body>
 </html>
