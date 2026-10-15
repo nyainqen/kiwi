@@ -52,23 +52,6 @@ function renderFooter() {
   `;
 }
 
-/* 3. 微信引导区 */
-function renderWechatSection() {
-  const el = document.getElementById("site-wechat");
-  if (!el) return;
-  el.innerHTML = `
-    <section>
-      <div class="wechat-section">
-        <h2>扫码加微信，直接产地价</h2>
-        <p>领尝鲜装 · 咨询当季鲜果 · 坏果包赔</p>
-        <div class="wechat-qr">
-          <img src="${SITE.qrImage}" alt="微信二维码">
-        </div>
-        <div class="wechat-id">微信号：${SITE.wechat}</div>
-      </div>
-    </section>
-  `;
-}
 
 /* 4. 悬浮按钮 */
 function renderFloatButton() {
@@ -92,6 +75,5 @@ function renderMobileNav() {
 /* ===== 执行 ===== */
 renderNav();
 renderFooter();
-renderWechatSection();
 renderFloatButton();
 renderMobileNav();
