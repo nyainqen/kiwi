@@ -23,24 +23,5 @@ const PRODUCTS = [
     unit: "5斤 / 盒",
     detailUrl: "/products/cuixiang-5jin-gift.html"
   },
-  {
-    id: "hongyang-5jin",
-    name: "红阳猕猴桃 · 5斤普通装",
-    image: "/images/product-hongyang-5jin.jpg",
-    badge: "红心",
-    desc: "红心品种，果肉细腻，甜度高，香气浓郁。5斤家庭装。",
-    price: "微信咨询价",
-    unit: "5斤 / 箱",
-    detailUrl: "/products/hongyang-5jin.html"
-  },
-  {
-    id: "huayou-5jin",
-    name: "华优猕猴桃 · 5斤普通装",
-    image: "/images/product-huayou-5jin.jpg",
-    badge: "经典",
-    desc: "华优品种，果肉翠绿，酸甜适口，耐储存。5斤家庭装。",
-    price: "微信咨询价",
-    unit: "5斤 / 箱",
-    detailUrl: "/products/huayou-5jin.html"
-  }
+
 ];
