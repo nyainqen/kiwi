@@ -5,87 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>联系购买 · 陕西周至翠香猕猴桃</title>
 <meta name="description" content="扫码加微信，直接产地价购买周至翠香猕猴桃。坏果包赔，售后无忧。">
+<link rel="stylesheet" href="/style.css">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; color: #2d3a2e; line-height: 1.7; background: #fafcf7; }
-  img { max-width: 100%; display: block; }
-  a { text-decoration: none; color: inherit; }
-  .navbar { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); box-shadow: 0 2px 12px rgba(0,0,0,0.06); display: flex; align-items: center; justify-content: space-between; padding: 16px 8%;max-width: 1400px; margin: 0 auto; }
-  .logo { font-size: 20px; font-weight: 700; color: #4a7c3f; }
-  .nav-links { display: flex; gap: 44px; font-size: 15px; }
-  .nav-links a:hover { color: #4a7c3f; }
-  .nav-links a.active { color: #4a7c3f; font-weight: 700; }
-  .nav-wechat { background: #4a7c3f; color: #fff; padding: 8px 18px; border-radius: 20px; font-size: 14px; font-weight: 600; }
-  .page-header { background: linear-gradient(135deg, #4a7c3f, #6ba05a); color: #fff; text-align: center; padding: 60px 5% 50px; }
-  .page-header h1 { font-size: 32px; margin-bottom: 10px; }
-  .page-header p { font-size: 16px; opacity: 0.9; }
-  section { padding: 60px 5%; }
-  .contact-wrap { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
-  .contact-card { background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 6px 24px rgba(0,0,0,0.07); text-align: center; }
-  .contact-card h3 { font-size: 20px; color: #3a5c32; margin-bottom: 16px; }
-  .contact-card .qr { width: 180px; height: 180px; margin: 0 auto 16px; background: #fff; border-radius: 12px; padding: 8px; border: 1px solid #e8f0e4; }
-  .contact-card .wechat-id { font-size: 17px; font-weight: 700; color: #4a7c3f; margin-bottom: 8px; }
-  .contact-card .note { font-size: 14px; color: #7a8a76; }
+  .contact-wrap { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: start; }
+  .contact-card { background: #fff; border-radius: 20px; padding: 36px; box-shadow: 0 8px 28px rgba(0,0,0,0.08); text-align: center; }
+  .contact-card h3 { font-size: 20px; color: #3a5c32; margin-bottom: 20px; }
+  .contact-card .qr { width: 200px; height: 200px; margin: 0 auto 18px; background: #fff; border-radius: 16px; padding: 10px; border: 1px solid #e8f0e4; }
+  .contact-card .wechat-id { font-size: 17px; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+  .contact-card .note { font-size: 14px; color: var(--text-light); }
+
   .faq h3 { font-size: 20px; color: #3a5c32; margin-bottom: 20px; }
-  .faq-item { margin-bottom: 20px; }
-  .faq-item h4 { font-size: 16px; color: #3a5c32; margin-bottom: 6px; }
-  .faq-item p { font-size: 14px; color: #6a7a66; }
-  .wechat-section { background: linear-gradient(135deg, #4a7c3f, #6ba05a); color: #fff; text-align: center; border-radius: 20px; padding: 50px 5%; max-width: 1000px; margin: 0 auto; }
-  .wechat-section h2 { font-size: 26px; margin-bottom: 12px; }
-  .wechat-section p { font-size: 16px; margin-bottom: 24px; opacity: 0.95; }
-  .wechat-qr { width: 180px; height: 180px; margin: 0 auto 16px; background: #fff; border-radius: 12px; padding: 8px; }
-  .wechat-id-big { font-size: 16px; font-weight: 600; letter-spacing: 1px; }
-  footer { background: #2d3a2e; color: #b8c4b4; text-align: center; padding: 30px 5%; font-size: 13px; }
-  footer .qr-small { width: 100px; margin: 0 auto 12px; border-radius: 8px; }
-  .float-wechat { display: none; position: fixed; bottom: 20px; right: 20px; z-index: 200; background: #4a7c3f; color: #fff; padding: 14px 22px; border-radius: 30px; font-size: 15px; font-weight: 700; box-shadow: 0 6px 20px rgba(74,124,63,0.5); }
+  .faq-item { background: #fff; border-radius: 14px; padding: 20px 24px; margin-bottom: 14px; box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
+  .faq-item h4 { font-size: 15px; color: #3a5c32; margin-bottom: 6px; }
+  .faq-item p { font-size: 14px; color: var(--text-mid); }
+
   @media (max-width: 768px) {
-    .nav-links { display: none; }
     .contact-wrap { grid-template-columns: 1fr; }
-    .page-header h1 { font-size: 24px; }
-    .float-wechat { display: block; }
   }
-/* 手机端底部导航 */
-.mobile-nav {
-  display: none;
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  background: #fff;
-  box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
-  z-index: 300;
-  padding: 8px 0;
-}
-.mobile-nav a {
-  flex: 1;
-  text-align: center;
-  font-size: 12px;
-  color: #7a8a76;
-  padding: 4px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-}
-.mobile-nav a .nav-icon { font-size: 20px; }
-.mobile-nav a.active { color: #4a7c3f; font-weight: 700; }
-@media (max-width: 768px) {
-  .mobile-nav { display: flex; }
-  body { padding-bottom: 70px; }
-}
 </style>
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="logo">周至翠香猕猴桃</div>
-  <div class="nav-links">
-    <a href="index.html">首页</a>
-    <a href="products.html">产品中心</a>
-    <a href="story.html">产地故事</a>
-    <a href="about.html">关于我们</a>
-    <a href="contact.html" class="active">联系购买</a>
-  </div>
-  <a href="contact.html" class="nav-wechat">加微信</a>
-</nav>
+<div id="site-nav"></div>
 
 <header class="page-header">
   <h1>联系购买</h1>
@@ -97,7 +38,7 @@
     <div class="contact-card">
       <h3>加微信下单</h3>
       <div class="qr">
-        <img src="images/wechat-qr.png" alt="微信二维码">
+        <img src="/images/wechat-qr.png" alt="微信二维码">
       </div>
       <div class="wechat-id">微信号：XXXXXXX</div>
       <div class="note">服务时间：9:00 - 21:00</div>
@@ -124,32 +65,10 @@
   </div>
 </section>
 
-<section style="padding-top:0;">
-  <div class="wechat-section">
-    <h2>扫码加微信，直接产地价</h2>
-    <p>领尝鲜装 · 咨询当季鲜果 · 坏果包赔</p>
-    <div class="wechat-qr">
-      <img src="images/wechat-qr.png" alt="微信二维码">
-    </div>
-    <div class="wechat-id-big">微信号：XXXXXXX</div>
-  </div>
-</section>
+<div id="site-wechat"></div>
+<div id="site-footer"></div>
+<div id="site-mobile-nav"></div>
 
-<footer>
-  <img src="images/wechat-qr.png" alt="微信二维码" class="qr-small">
-  <p>陕西周至翠香猕猴桃 · 产地直供</p>
-  <p>微信：XXXXXXX &nbsp;|&nbsp; 电话：XXXXXXXXXXX</p>
-  <p style="margin-top:10px; opacity:0.6;">© 2026 周至翠香猕猴桃</p>
-</footer>
-
-<a href="contact.html" class="float-wechat">微信咨询</a>
-<nav class="mobile-nav">
-  <a href="index.html">🏠<span class="nav-icon">首页</span></a>
-  <a href="products.html">🥝<span class="nav-icon">产品</span></a>
-  <a href="story.html">🌿<span class="nav-icon">故事</span></a>
-  <a href="about.html">ℹ️<span class="nav-icon">关于</span></a>
-  <a href="contact.html" class="active" >💬<span class="nav-icon">联系</span></a>
-</nav>
-
+<script src="/common.js"></script>
 </body>
 </html>
