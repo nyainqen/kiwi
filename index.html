@@ -5,185 +5,105 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>陕西周至翠香猕猴桃 · 产地直供</title>
 <meta name="description" content="陕西周至翠香猕猴桃，秦岭北麓核心产区，树上八九分熟采摘，坏果包赔。扫码加微信，产地直供价。">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; color: #2d3a2e; line-height: 1.7; background: #fafcf7; }
-  img { max-width: 100%; display: block; }
-  a { text-decoration: none; color: inherit; }
-  .navbar {position: sticky;top: 0;z-index: 100;background: rgba(255,255,255,0.95);backdrop-filter: blur(8px);box-shadow: 0 2px 12px rgba(0,0,0,0.06);display: flex;align-items: center;justify-content: space-between;padding: 16px 8%;max-width:1400px;margin: 0 auto;}
-  .logo {font-size: 20px;font-weight: 700;color: #4a7c3f;   /* 绿色 */}
-  .nav-links {display: flex;gap: 44px;font-size: 15px;}
-   .nav-links a:hover { color: #4a7c3f; }
-   .nav-links a.active { color: #4a7c3f; font-weight: 700; }
- .nav-wechat { background: #4a7c3f; color: #fff; padding: 8px 18px; border-radius: 20px; font-size: 14px; font-weight: 600; }
-  section { padding: 60px 5%; }
-  .section-title { text-align: center; font-size: 26px; font-weight: 700; color: #3a5c32; margin-bottom: 12px; }
-  .section-sub { text-align: center; color: #7a8a76; font-size: 15px; margin-bottom: 40px; }
-  .hero { position: relative; min-height: 520px; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; background: linear-gradient(rgba(30,50,25,0.45), rgba(30,50,25,0.55)), url('images/banner.jpg') center/cover no-repeat; padding: 80px 5%; }
-  .hero h1 { font-size: 38px; font-weight: 800; margin-bottom: 16px; letter-spacing: 1px; }
-  .hero p { font-size: 18px; margin-bottom: 30px; opacity: 0.95; }
-  .btn-main { display: inline-block; background: #f5a623; color: #fff; padding: 14px 38px; border-radius: 30px; font-size: 16px; font-weight: 700; box-shadow: 0 6px 20px rgba(245,166,35,0.4); transition: transform 0.2s; }
-  .btn-main:hover { transform: translateY(-2px); }
-  .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
-  .trust-item { background: #fff; border-radius: 14px; padding: 28px 20px; text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.05); }
-  .trust-item .icon { font-size: 32px; margin-bottom: 10px; }
-  .trust-item h3 { font-size: 17px; color: #3a5c32; margin-bottom: 6px; }
-  .trust-item p { font-size: 14px; color: #7a8a76; }
-  .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 820px; margin: 0 auto; }
-  .product-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 24px rgba(0,0,0,0.07); transition: transform 0.25s; }
-  .product-card:hover { transform: translateY(-4px); }
-  .product-card img { height: 220px; object-fit: cover; width: 100%; }
-  .product-info { padding: 20px; }
-  .product-info h3 { font-size: 18px; color: #3a5c32; margin-bottom: 8px; }
-  .product-info .desc { font-size: 14px; color: #6a7a66; margin-bottom: 14px; }
-  .product-info .price { font-size: 16px; color: #e07b39; font-weight: 700; margin-bottom: 14px; }
-  .btn-outline { display: inline-block; border: 2px solid #4a7c3f; color: #4a7c3f; padding: 8px 22px; border-radius: 20px; font-size: 14px; font-weight: 600; }
-  .btn-outline:hover { background: #4a7c3f; color: #fff; }
-  .more-link { text-align: center; margin-top: 30px; }
-  .more-link a { color: #4a7c3f; font-weight: 600; font-size: 15px; }
-  .more-link a:hover { text-decoration: underline; }
-  .wechat-section { background: linear-gradient(135deg, #4a7c3f, #6ba05a); color: #fff; text-align: center; border-radius: 20px; padding: 50px 5%; max-width: 1000px; margin: 0 auto; }
-  .wechat-section h2 { font-size: 26px; margin-bottom: 12px; }
-  .wechat-section p { font-size: 16px; margin-bottom: 24px; opacity: 0.95; }
-  .wechat-qr { width: 180px; height: 180px; margin: 0 auto 16px; background: #fff; border-radius: 12px; padding: 8px; }
-  .wechat-id { font-size: 16px; font-weight: 600; letter-spacing: 1px; }
-  footer { background: #2d3a2e; color: #b8c4b4; text-align: center; padding: 30px 5%; font-size: 13px; }
-  footer .qr-small { width: 100px; margin: 0 auto 12px; border-radius: 8px; }
-  .float-wechat { display: none; position: fixed; bottom: 20px; right: 20px; z-index: 200; background: #4a7c3f; color: #fff; padding: 14px 22px; border-radius: 30px; font-size: 15px; font-weight: 700; box-shadow: 0 6px 20px rgba(74,124,63,0.5); }
-  @media (max-width: 768px) {
-    .nav-links { display: none; }
-    .hero h1 { font-size: 26px; }
-    .hero p { font-size: 15px; }
-    .trust-grid, .product-grid { grid-template-columns: 1fr; }
-    .section-title { font-size: 22px; }
-    section { padding: 40px 5%; }
-    .float-wechat { display: block; }
-  }
-/* 手机端底部导航 */
-.mobile-nav {
-  display: none;
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  background: #fff;
-  box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
-  z-index: 300;
-  padding: 8px 0;
-}
-.mobile-nav a {
-  flex: 1;
-  text-align: center;
-  font-size: 12px;
-  color: #7a8a76;
-  padding: 4px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-}
-.mobile-nav a .nav-icon { font-size: 20px; }
-.mobile-nav a.active { color: #4a7c3f; font-weight: 700; }
-@media (max-width: 768px) {
-  .mobile-nav { display: flex; }
-  body { padding-bottom: 70px; }
-}
-</style>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="logo">周至翠香猕猴桃</div>
-  <div class="nav-links">
-    <a href="index.html" class="active">首页</a>
-    <a href="products.html">产品中心</a>
-    <a href="story.html">产地故事</a>
-    <a href="about.html">关于我们</a>
-    <a href="contact.html">联系购买</a>
-  </div>
-  <a href="contact.html" class="nav-wechat">加微信</a>
-</nav>
+<div id="site-nav"></div>
 
 <header class="hero">
-  <div>
-    <h1>周至·翠香猕猴桃</h1> 
-    <p>终南山下，道地好果。树上八九分熟采摘，到手即食。</p>
-    <a href="products.html" class="btn-main">查看当季鲜果</a>
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">陕西 · 周至 · 产地直供</div>
+    <h1>终南山下，道地好果</h1>
+    <p>树上八九分熟采摘，到手即食。甜度可达18°的翠香猕猴桃。</p>
+    <div class="hero-buttons">
+      <a href="/products.html" class="btn-main">查看当季鲜果</a>
+      <a href="/contact.html" class="btn-ghost">扫码加微信</a>
+    </div>
   </div>
 </header>
 
 <section>
   <div class="trust-grid">
     <div class="trust-item">
-      <div class="icon">🌿</div>
+      <div class="trust-icon">🌿</div>
       <h3>秦岭北麓核心产区</h3>
       <p>世界猕猴桃原生地之一，日照超2000小时</p>
     </div>
     <div class="trust-item">
-      <div class="icon">☀️</div>
+      <div class="trust-icon">☀️</div>
       <h3>树上八九分熟采摘</h3>
       <p>不催熟，后熟糖度可达15°以上</p>
     </div>
     <div class="trust-item">
-      <div class="icon">📦</div>
+      <div class="trust-icon">📦</div>
       <h3>坏果包赔</h3>
       <p>拍照即赔，售后无忧</p>
     </div>
   </div>
 </section>
 
-<section style="background:#f2f7ee;">
+<section style="background:var(--primary-bg);">
   <h2 class="section-title">当季主打</h2>
   <p class="section-sub">周至翠香，产地直供</p>
   <div class="product-grid">
     <div class="product-card">
-      <img src="images/product-5jin.jpg" alt="翠香猕猴桃5斤装">
+      <div class="product-img-wrap">
+        <img src="/images/product-5jin.jpg" alt="翠香猕猴桃5斤装">
+        <div class="product-badge">热销</div>
+      </div>
       <div class="product-info">
         <h3>翠香猕猴桃 · 5斤装</h3>
-        <p class="desc">70-90g/枚，果肉翠绿，细嫩多汁</p>
-        <p class="price">微信咨询价</p>
-        <a href="products.html" class="btn-outline">查看详情</a>
+        <p class="desc">70-90g/枚，果肉翠绿，细嫩多汁。</p>
+        <div class="price-row">
+          <span class="price">微信咨询价</span>
+          <span class="unit">5斤 / 箱</span>
+        </div>
+        <a href="/products/5jin.html" class="btn-outline">查看详情</a>
       </div>
     </div>
     <div class="product-card">
-      <img src="images/product-gift.jpg" alt="翠香猕猴桃礼盒装">
+      <div class="product-img-wrap">
+        <img src="/images/product-gift.jpg" alt="翠香猕猴桃礼盒装">
+        <div class="product-badge">礼盒</div>
+      </div>
       <div class="product-info">
         <h3>翠香猕猴桃 · 礼盒装</h3>
-        <p class="desc">110g+/枚，12枚精装，送礼佳选</p>
-        <p class="price">微信咨询价</p>
-        <a href="products.html" class="btn-outline">查看详情</a>
+        <p class="desc">110g+/枚，12枚精装，送礼佳选。</p>
+        <div class="price-row">
+          <span class="price">微信咨询价</span>
+          <span class="unit">12枚 / 盒</span>
+        </div>
+        <a href="/products/gift.html" class="btn-outline">查看详情</a>
       </div>
     </div>
   </div>
-  <div class="more-link">
-    <a href="products.html">查看全部产品 →</a>
+  <div style="text-align:center; margin-top:40px;">
+    <a href="/products.html" style="color:var(--primary); font-weight:600;">查看全部产品 →</a>
   </div>
 </section>
 
-<section>
-  <div class="wechat-section">
-    <h2>扫码加微信，直接产地价</h2>
-    <p>领尝鲜装 · 咨询当季鲜果 · 坏果包赔</p>
-    <div class="wechat-qr">
-      <img src="images/wechat-qr.png" alt="微信二维码">
+<section class="farmer-section">
+  <div class="farmer-wrap">
+    <div class="farmer-img">
+      <img src="/images/orchard.jpg" alt="周至果园">
     </div>
-    <div class="wechat-id">微信号：XXXXXXX</div>
+    <div class="farmer-text">
+      <h3>果农的话</h3>
+      <p class="quote">种了十几年翠香，甜度不到我不摘。果子在藤上多挂一天，风味就多一分。</p>
+      <p class="sign">—— 周至果农 · 老张</p>
+    </div>
   </div>
 </section>
 
-<footer>
-  <img src="images/wechat-qr.png" alt="微信二维码" class="qr-small">
-  <p>陕西周至翠香猕猴桃 · 产地直供</p>
-  <p>微信：XXXXXXX &nbsp;|&nbsp; 电话：XXXXXXXXXXX</p>
-  <p style="margin-top:10px; opacity:0.6;">© 2026 周至翠香猕猴桃</p>
-</footer>
+<div id="site-wechat"></div>
 
-<a href="contact.html" class="float-wechat">微信咨询</a>
+<div id="site-footer"></div>
 
-<nav class="mobile-nav">
-  <a href="index.html" class="active" >🏠<span class="nav-icon">首页</span></a>
-  <a href="products.html">🥝<span class="nav-icon">产品</span></a>
-  <a href="story.html">🌿<span class="nav-icon">故事</span></a>
-  <a href="about.html">ℹ️<span class="nav-icon">关于</span></a>
-  <a href="contact.html">💬<span class="nav-icon">联系</span></a>
-</nav>
+<div id="site-mobile-nav"></div>
+
+<script src="/common.js"></script>
 </body>
 </html>
