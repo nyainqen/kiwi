@@ -1,4 +1,4 @@
-/* ===== 全站配置：改这里就能改全站信息 ===== */
+/* ===== 全站配置 ===== */
 const SITE = {
   brand: "周至翠香猕猴桃",
   wechat: "XXXXXXX",
@@ -22,7 +22,7 @@ function isActive(href) {
   return currentPath.endsWith(href);
 }
 
-/* ===== 注入导航栏 ===== */
+/* 1. 导航栏 */
 function renderNav() {
   const el = document.getElementById("site-nav");
   if (!el) return;
@@ -38,7 +38,7 @@ function renderNav() {
   `;
 }
 
-/* ===== 注入页脚 ===== */
+/* 2. 页脚 */
 function renderFooter() {
   const el = document.getElementById("site-footer");
   if (!el) return;
@@ -52,7 +52,25 @@ function renderFooter() {
   `;
 }
 
-/* ===== 注入悬浮按钮 ===== */
+/* 3. 微信引导区 */
+function renderWechatSection() {
+  const el = document.getElementById("site-wechat");
+  if (!el) return;
+  el.innerHTML = `
+    <section>
+      <div class="wechat-section">
+        <h2>扫码加微信，直接产地价</h2>
+        <p>领尝鲜装 · 咨询当季鲜果 · 坏果包赔</p>
+        <div class="wechat-qr">
+          <img src="${SITE.qrImage}" alt="微信二维码">
+        </div>
+        <div class="wechat-id">微信号：${SITE.wechat}</div>
+      </div>
+    </section>
+  `;
+}
+
+/* 4. 悬浮按钮 */
 function renderFloatButton() {
   const el = document.createElement("a");
   el.href = "/contact.html";
@@ -61,7 +79,7 @@ function renderFloatButton() {
   document.body.appendChild(el);
 }
 
-/* ===== 注入手机底部导航 ===== */
+/* 5. 手机底部导航 */
 function renderMobileNav() {
   const el = document.getElementById("site-mobile-nav");
   if (!el) return;
