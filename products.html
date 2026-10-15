@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>产品中心 · 陕西周至翠香猕猴桃</title>
-<meta name="description" content="周至翠香猕猴桃当季鲜果，5斤装、10斤装、礼盒装，产地直供，坏果包赔。">
+<meta name="description" content="周至猕猴桃当季鲜果，翠香10斤装、翠香5斤礼盒、红阳5斤装、华优5斤装，产地直供，坏果包赔。">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -13,38 +13,40 @@
 
 <header class="page-header">
   <h1>当季鲜果</h1>
-  <p>周至翠香，产地直供，坏果包赔</p>
+  <p>周至产地直供，坏果包赔</p>
 </header>
 
 <section>
-  <div class="product-grid">
-    <div class="product-card">
-      <img src="/images/product-5jin.jpg" alt="翠香猕猴桃5斤装">
-      <div class="product-info">
-        <h3>翠香猕猴桃 · 5斤装</h3>
-        <p class="desc">70-90g/枚，果肉翠绿，细嫩多汁。适合家庭日常食用。</p>
-        <p class="price">微信咨询价</p>
-        <a href="/products/5jin.html" class="btn-outline">查看详情</a>
-      </div>
-    </div>
-    <div class="product-card">
-      <img src="/images/product-gift.jpg" alt="翠香猕猴桃礼盒装">
-      <div class="product-info">
-        <h3>翠香猕猴桃 · 礼盒装</h3>
-        <p class="desc">110g+/枚，12枚精装。果形饱满，送礼佳选。</p>
-        <p class="price">微信咨询价</p>
-        <a href="/products/gift.html" class="btn-outline">查看详情</a>
-      </div>
-    </div>
-  </div>
+  <div id="product-list" class="product-grid"></div>
 </section>
 
 <div id="site-wechat"></div>
-
 <div id="site-footer"></div>
-
 <div id="site-mobile-nav"></div>
 
+<script src="/products-data.js"></script>
+<script>
+  const container = document.getElementById("product-list");
+  if (container && typeof PRODUCTS !== "undefined") {
+    container.innerHTML = PRODUCTS.map(p => `
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="${p.image}" alt="${p.name}">
+          ${p.badge ? `<div class="product-badge">${p.badge}</div>` : ""}
+        </div>
+        <div class="product-info">
+          <h3>${p.name}</h3>
+          <p class="desc">${p.desc}</p>
+          <div class="price-row">
+            <span class="price">${p.price}</span>
+            <span class="unit">${p.unit}</span>
+          </div>
+          <a href="${p.detailUrl}" class="btn-outline">查看详情</a>
+        </div>
+      </div>
+    `).join("");
+  }
+</script>
 <script src="/common.js"></script>
 </body>
 </html>
